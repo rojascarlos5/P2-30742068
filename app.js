@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 
-const port = process.env.PORT || 3000;
 
 // Motor de plantilla
 app.set("view engine", "ejs");
@@ -28,7 +27,10 @@ app.use((req, res, next) => {
   });
 });
 
+const PORT = process.env.PORT || 3000;
 
-app.listen(port, () => {
-  console.log('Servidor escuchando en el puerto', port);
+console.log({PORT});
+
+app.listen(PORT, () => {
+  console.log('Servidor escuchando en el puerto', PORT);
 });
