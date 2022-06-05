@@ -17,6 +17,9 @@ app.get("/", (req, res) => {
 app.get("/Contacto", (req, res) => {
   res.render("Contacto", { TituloContacto: "Informacion de contacto" });
 });
+app.get("/proximamente", (req, res) => {
+  res.render("proximamente", { Tituloxd: "Mas utilidades seran agregadas proximamente" });
+});
 //Estado 404 de pagina
 app.use((req, res, next) => {
   res.status(404).render("404", {
