@@ -24,7 +24,7 @@ app.get("/proximamente", (req, res) => {
 app.use((req, res, next) => {
   res.status(404).render("404", {
     titulo: "Error 404",
-    descripcion: "Pagina no encontrada",
+    descripcion: "Ubicación no encontrada",
   });
 });
 
